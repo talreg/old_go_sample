@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"sample/mathpack"
+
+	"talreg.com/sample/mathpack"
 )
 
 func main() {

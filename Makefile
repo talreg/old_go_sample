@@ -1,9 +1,6 @@
 default:
-	@export GOPATH=$$GOPATH:$$(pwd) && go install sample
-edit_atom:
-	@export GOPATH=$$GOPATH:$$(pwd) && atom .
-edit:
-	@export GOPATH=$$GOPATH:$$(pwd) && code .
+	@mkdir -p bin
+	@go build -o bin/sample
 
 run: default
 	@bin/sample
@@ -11,4 +8,4 @@ run: default
 clean:
 	@rm -rf bin
 test:
-	@export GOPATH=$$GOPATH:$$(pwd) && go test ./...
+	@go test ./...
